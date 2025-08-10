@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            text-decoration: none;
+            list-style: none;
+            outline: 0;
+        }
+        body{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        .navbar{
+            background-color:aliceblue;
+            display:flex;
+            justify-content: space-around;
+            padding:15px;
+            font-size: 30px;
+            font-weight: bold;
+            box-shadow: 6px 6px 6px rgb(223, 221, 221);
+        }
+        .navbar .home{
+            color:green;
+        }
+        .navbar .cart{
+            height: 40px;
+            width: 40px;
+            background-color: lightgreen;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 30px;
+            padding-top: 5px;
+        }
+        .cart #cart_amount{
+            color:black;
+
+        }
+         .heading {
+    display: flex;
+    justify-content: center;
+    font-size: 3.5rem;
+    color: rgb(58, 57, 57);
+    padding-top: 4rem;
+}
+
+.heading span {
+    color: white;
+    background-color: green;
+    padding: 10px;
+
+    display: inline-block;
+    padding: 0.5rem 3rem;
+    clip-path: polygon(100% 0, 93% 50%, 100% 99%, 0% 100%, 7% 50%, 0% 0%);
+}
+        
+
+    button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2rem;
+        width: 8rem;
+        font-size: 1.5rem;
+    background-color: white;
+    color: green;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 1rem auto;
+    position: relative;
+    border: 2px solid black;
+
+
+}
+
+a {
+    text-decoration: none;
+}
+
+button:hover {
+    background-color: green;
+    color: white;
+    /* Hover effect for better interaction */
+}
+
+.shop_item{
+   
+    border: 1px solid rgb(99, 99, 100);
+    padding: 0 1rem;
+    background-color: white;
+    outline: 2px solid rgb(182, 179, 179);
+    padding: 40px;
+    margin: 10px;
+    outline-offset: -1rem;
+    text-align: center;
+
+}
+
+.shop_item:hover {
+    box-shadow: 5px 5px 5px 5px rgb(152, 152, 152);
+}
+
+ h1 {
+    font-size: 2rem;
+    color: rgb(40, 40, 40);
+    line-height: 1.8;
+}
+
+ .shop{
+
+    padding: 0 1rem ;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-evenly;
+    gap: .8rem;
+    margin-top: 3rem;
+}
+
+ img {
+    height: 8rem;
+    width: 13rem;
+}
+
+.shop_item {
+    border: 2px solid rgb(99, 99, 100);
+    padding: 0 2rem;
+    background-color: white;
+    outline: 3px solid rgb(182, 179, 179);
+    padding: 50px;
+    margin: 20px;
+    outline-offset: -1rem;
+    text-align: center;
+    border-radius: 14px;
+}
+
+.shop_item:hover {
+    box-shadow: 5px 5px 5px 5px rgb(152, 152, 152);
+}
+
+ h1 {
+    font-size: 2.5rem;
+    color: rgb(40, 40, 40);
+    line-height: 1.4;
+}
+p{
+    font-size:1.3rem ;
+    color:rgb(106, 106, 106)
+}
+    </style>
+</head>
+<body>
+<div class="navbar">
+    <a class="home" href="index.html">Home</a>
+    <a href="cart2.html">
+        <div class="cart">
+            <div id="cart_amount">0</div>
+        </div>
+    </a>
+</div>
+
+ <section class="vegies">
+        <h1 class="heading">Our <span>Fruits</span></h1>
+    </section>
+
+<!-- Shop-->
+ <div id="shop" class="shop"></div>
+    <script src="vegis_data.js"></script>
+    <script src="index2.js"></script>
+</body>
+</html>

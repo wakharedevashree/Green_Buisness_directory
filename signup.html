@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Login & Sign Up | Green Business</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+<style>
+:root {
+  --green: #00b894;
+  --black: #333;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to bottom right, #e0ffff, #fff0f5);
+  height: 100%;
+}
+
+/* ===== HEADER ===== */
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 8%;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+#header .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: var(--black);
+}
+
+#header .logo i {
+  color: var(--green);
+  font-size: 1.8rem;
+}
+
+#header .navbar {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+#header .navbar a {
+  font-size: 1rem;
+  color: var(--black);
+  text-decoration: none;
+  padding: 0.3rem 0.6rem;
+  transition: color 0.3s ease;
+}
+
+#header .navbar a:hover {
+  color: var(--green);
+}
+
+#header .icons {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+#header .icons i {
+  height: 2.8rem;
+  width: 2.8rem;
+  font-size: 1.4rem;
+  line-height: 2.8rem;
+  border-radius: 0.5rem;
+  background-color: #eee;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+#header .icons i:hover {
+  background-color: var(--green);
+  color: white;
+  transform: scale(1.1);
+}
+
+/* ===== BACKGROUND ===== */
+.content_background {
+  background-image: url('veg_back.avif');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 80px; /* space for header */
+}
+
+/* ===== AUTH BOX ===== */
+.auth-box {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+}
+
+.auth-heading {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: rgb(0, 99, 102);
+}
+
+.auth-heading span {
+  font-family: cursive;
+  color: cadetblue;
+}
+
+.tab-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.tab-btn {
+  padding: 0.6rem 1.5rem;
+  border: none;
+  border-radius: 30px;
+  background: #f0ffff;
+  cursor: pointer;
+  transition: 0.3s ease;
+  font-weight: bold;
+  color: #333;
+}
+
+.tab-btn.active {
+  background: var(--green);
+  color: white;
+}
+
+.form-section {
+  display: none;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-section.active {
+  display: flex;
+}
+
+.form-section input {
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  outline: none;
+  font-size: 1rem;
+}
+
+.auth-btn {
+  background: linear-gradient(137deg, #c1ffff, #acffac);
+  border: none;
+  padding: 0.8rem;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  font-weight: 600;
+}
+
+.auth-btn:hover {
+  background: linear-gradient(137deg, #90fafa, #83ff83);
+}
+
+.switch-text {
+  font-size: 0.9rem;
+  margin-top: 1rem;
+}
+
+.switch-text a {
+  color: var(--green);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.switch-text a:hover {
+  text-decoration: underline;
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header id="header">
+  <a href="#" class="logo">
+    <i class="fa fa-shopping-basket"></i>
+    <span>GREEN BUSINESS</span>
+  </a>
+  <nav class="navbar">
+    <a href="index.html">Home</a>
+    <a href="index.html">Products</a>
+    <a href="about.html">About Us</a>
+    <a href="review.html">Reviews</a>
+  </nav>
+  <div class="icons">
+    <a href="cart1.html" style="text-decoration:none; color:inherit;">
+      <i class="fa fa-shopping-cart"></i>
+    </a>
+    <i class="fa fa-user"></i>
+  </div>
+</header>
+
+<!-- BACKGROUND + FORM -->
+<div class="content_background">
+  <div class="auth-box">
+    <h2 class="auth-heading">Welcome to <span>Green Business Directory</span></h2>
+    <div class="tab-buttons">
+      <button class="tab-btn active" onclick="switchForm('login')">Login</button>
+      <button class="tab-btn" onclick="switchForm('signup')">Sign Up</button>
+    </div>
+
+    <form id="login-form" class="form-section active">
+      <input type="text" placeholder="Email" required />
+      <input type="password" placeholder="Password" required />
+      <button type="submit" class="auth-btn">Login</button>
+      <p class="switch-text">Don't have an account? <a href="#" onclick="switchForm('signup')">Sign Up</a></p>
+    </form>
+
+    <form id="signup-form" class="form-section">
+      <input type="text" placeholder="Full Name" required />
+      <input type="email" placeholder="Email" required />
+      <input type="password" placeholder="Create Password" required />
+      <button type="submit" class="auth-btn">Create Account</button>
+      <p class="switch-text">Already have an account? <a href="#" onclick="switchForm('login')">Login</a></p>
+    </form>
+  </div>
+</div>
+
+<script>
+function switchForm(formType) {
+  const loginForm = document.getElementById('login-form');
+  const signupForm = document.getElementById('signup-form');
+  const buttons = document.querySelectorAll('.tab-btn');
+
+  if (formType === 'login') {
+    loginForm.classList.add('active');
+    signupForm.classList.remove('active');
+    buttons[0].classList.add('active');
+    buttons[1].classList.remove('active');
+  } else {
+    loginForm.classList.remove('active');
+    signupForm.classList.add('active');
+    buttons[0].classList.remove('active');
+    buttons[1].classList.add('active');
+  }
+}
+</script>
+
+</body>
+</html>

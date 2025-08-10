@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home_Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <header id="header">
+      <a href="#" class="logo">
+        <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+        <span>GREEN BUSINESS</span>
+      </a>
+      <nav class="navbar">
+        <a href="#Home">Home</a>
+        <!-- Changed href to #Home for navigation -->
+        <a href="#Products">Products</a>
+        <!-- Updated link to #Products -->
+        
+        <!-- External link to login page -->
+        <a href="about.html">About Us</a>
+        <!-- Assuming #About section exists -->
+        <a href="review.html">Reviews</a>
+        <!-- Assuming #Reviews section exists -->
+      </nav>
+
+      <!-- Work here -->
+      <div class="icons">
+  <i class="fa fa-bars" aria-hidden="true" id="menu-btn"></i>
+  
+  <a href="cart1.html">
+    <i class="fa fa-shopping-cart" aria-hidden="true" id="cart"></i> 
+  </a>
+  <a href="signup.html"><i class="fa fa-user" aria-hidden="true" id="login-btn"></i>
+    </a>
+</div>
+
+
+      <form class="search-form">
+        <input type="search" id="search-box" placeholder="Search Here.." />
+        <label for="search-box" class="">
+          <i class="fa fa-search" aria-hidden="true"></i
+        ></label>
+      </form>
+      <ul class="list">
+        <li><a href="#" class="">Vegetables</a></li>
+        <li><a href="#" class="">Fruits</a></li>
+        <li><a href="#" class="">Dairy Products</a></li>
+      </ul>
+      <div class="shopping_cart">
+        <div class="box">
+          <i class="fa fa-trash" aria-hidden="true" id="bars"></i>
+          <img src="veg.jpeg" alt="" />
+          <div class="content">
+            <h3>Tomato</h3>
+            <span class="price">Rs.20</span>
+            <span class="quantity">Qty : 3</span>
+          </div>
+        </div>
+
+        <div class="box">
+          <i class="fa fa-trash" aria-hidden="true" id="bars"></i>
+          <img src="frt.jpeg" alt="" />
+          <div class="content">
+            <h3>Apple</h3>
+            <span class="price">Rs.20</span>
+            <span class="quantity">Qty : 3</span>
+          </div>
+        </div>
+
+        <div class="box">
+          <i class="fa fa-trash" aria-hidden="true" id="bars"></i>
+          <img src="mi.jpeg" alt="" />
+          <div class="content">
+            <h3>Milk</h3>
+            <span class="price">Rs.20</span>
+            <span class="quantity">Qty : 3</span>
+          </div>
+        </div>
+
+        <div class="total">Total : 18.4 Rs</div>
+        <a href="#" class="btn">Checkout</a>
+      </div>
+
+    <form class="login-form" action="http://localhost\FullProjects (11)\FullProjects (2)\FullProjects (2)\FullProjects\FullProjects\Green_Buisness_Website\process.php" method="post">
+        <h3>Sign Up</h3>
+        <input type="email" placeholder="Enter your email" class="box" id="email" name="email" required />
+        <input type="password" placeholder="Enter your password" class="box" id="password" name="password" required />
+        <p>Forgot Your Password? <a href="">Click Here</a></p>
+        <p>Don't Have An Account? <a href="">Create Now</a></p>
+        <input type="submit" value="Sign Up" class="button" name="submit" />
+    </form>
+    
+    <!-- Pop-up Message 
+    <div id="popupMessage" class="popup-message" style="display: none;">
+      <p>Please fill in your personal details below.</p>
+      <button id="closePopup">Close</button>
+    </div>
+    -->
+    </header>
+  
+  <!--
+  <form class="buyer-info-form" style="display: none;">
+   <h3>Enter Your Information</h3>
+   <input type="text" placeholder="Full Name" class="box" />
+   <input type="text" placeholder="Phone Number" class="box" />
+   <input type="text" placeholder="Address" class="box" />
+   <input type="submit" value="Submit Info" class="button" />
+  </form>
+-->
+
+    <div class="content_background" id="Home">
+      <div class="text-overlay">
+        <h1>
+          " <span>H</span>ere you get fresh
+          <div class="organic"><span>O</span>rganic</div>
+        </h1>
+        <h1>
+          <span>V</span>egetables,<span>F</span>ruits and <span>D</span>airy
+          Products ! "
+        </h1>
+      </div>
+    </div>
+
+    <section class="products" id="Products">
+      <h1 class="heading">Our <span>Products</span></h1>
+      <div class="product">
+        <div class="home_card">
+          <img class="home_card_img" src="vegies.jpeg" alt="" />
+          <h1>Fresh Vegetables</h1>
+          <div class="stars">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star-half"></i>
+          </div>
+          <a href="index1.html"><div class="button">Click here</div></a>
+        </div>
+
+        <div class="home_card">
+          <img class="home_card_img" src="fruit.jpeg" alt="" />
+          <h1>Fresh Fruits</h1>
+          <div class="stars">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star-half"></i>
+          </div>
+          <a href="index2.html"><div class="button">Click here</div></a>
+        </div>
+
+        <div class="home_card">
+          <img class="home_card_img" src="dairy1.jpeg" alt="" />
+          <h1>Fresh Dairy Products</h1>
+          <div class="stars">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star-half"></i>
+          </div>
+          <a href="index3.html"><div class="button">Click here</div></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="features" id="features">
+      <h1 class="heading">Our <span>Features</span></h1>
+
+      <div class="box-container">
+        <div class="feature-card">
+          <img
+            class="feature-card-img"
+            src="fresh_organic.webp"
+            alt="Fresh And Organic"
+          />
+          <div class="feature-content">
+            <h3>Fresh And Organic</h3>
+            <p>
+              We ensure that all the products listed in our directory are
+              sourced from businesses committed to organic practices. From
+              locally grown vegetables to sustainably harvested fruits, every
+              item is free from harmful chemicals and pesticides. By supporting
+              these businesses, you're not only promoting your health but also
+              contributing to environmental sustainability.
+            </p>
+          </div>
+        </div>
+
+        <div class="feature-card">
+          <img
+            class="feature-card-img"
+            src="free_del.jpg"
+            alt="Free Delivery"
+          />
+          <div class="feature-content">
+            <h3>Free Delivery</h3>
+            <p>
+              We partner with eco-conscious delivery services to ensure that
+              your products arrive at your doorstep with the smallest
+              environmental footprint possible. Our green businesses prioritize
+              eco-friendly packaging and carbon-neutral delivery methods, so you
+              can enjoy convenience without compromising the environment.
+            </p>
+          </div>
+        </div>
+
+        <div class="feature-card">
+          <img class="feature-card-img" src="easy_pay.png" alt="Easy Payment" />
+          <div class="feature-content">
+            <h3>Easy Payment</h3>
+            <p>
+              Supporting sustainable businesses has never been easier. We offer
+              a variety of payment options that are secure, fast, and simple.
+              Whether you prefer paying online or through eco-friendly methods
+              like digital wallets, we've got you covered, making your
+              contribution to the green economy seamless.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="footer">
+      <div class="container">
+        <div class="box1">
+          <h3>Groco <i class="fa fa-shopping-basket"></i></h3>
+          <p>
+            Feel free To Follow Us On Social<br />
+            Media Handlers All the Links <br />Are Given Below
+          </p>
+          <div class="share">
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-twitter"></a>
+            <a href="#" class="fa fa-instagram"></a>
+            <a href="#" class="fa fa-linkedin"></a>
+          </div>
+        </div>
+
+        <div class="box1">
+          <h3>Contact Info</h3>
+          <a href="#" class="links">
+            <i class="fa fa-phone"></i> +91 9890875423
+          </a>
+          <a href="#" class="links">
+            <i class="fa fa-phone"></i> +111-222-3333
+          </a>
+          <a href="#" class="links">
+            <i class="fa fa-envelope"></i> example@gmail.com
+          </a>
+          <a href="#" class="links">
+            <i class="fa fa-map-marker"></i> Kopargoan, India
+          </a>
+        </div>
+
+        <div class="box1">
+          <h3>Quick Links</h3>
+          <a href="#" class="links"> <i class="fa fa-arrow-right"></i> Home</a>
+          <a href="#" class="links">
+            <i class="fa fa-arrow-right"></i> Product</a
+          >
+          <a href="#" class="links">
+            <i class="fa fa-arrow-right"></i> Features</a
+          >
+          <a href="#" class="links">
+            <i class="fa fa-arrow-right"></i> Categories</a
+          >
+          <a href="#" class="links">
+            <i class="fa fa-arrow-right"></i> Reviews</a
+          >
+        </div>
+
+        <div class="box1">
+          <h3>Newsletter</h3>
+          <p>Subscribe For Latest Updates</p>
+          <input type="email" placeholder="Your Email" class="email" />
+          <br />
+          <input type="submit" value="Subscribe" class="btn" />
+        </div>
+      </div>
+    </section>
+
+    
+    <script src="index.js">
+      // Smooth scrolling for navigation links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+
+          document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth",
+          });
+        });
+      });
+
+document.addEventListener("DOMContentLoaded", function() {
+    const menuBtn = document.getElementById("menu-btn");
+    const navbar = document.querySelector("#header .navbar");
+
+    menuBtn.addEventListener("click", function() {
+        navbar.classList.toggle("active");
+        // Close search form if open
+        document.querySelector("#header .search-form")?.classList.remove("active");
+    });
+
+    
+    navbar.querySelectorAll("a").forEach(link => {
+        link.addEventListener("click", () => {
+            navbar.classList.remove("active");
+        });
+    });
+});
+
+
+    </script>
+  </body>
+</html>

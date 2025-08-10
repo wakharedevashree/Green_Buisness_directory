@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Farmer Registration - Green Business</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="business.css" />
+  </head>
+  <body>
+    <!-- Banner Section -->
+    <section class="banner">
+      <h1>Empower Your Green Business</h1>
+      <p>Join our directory and grow your farm with us. Register below!</p>
+      <a href="#register" class="btn-register">Register Now</a>
+    </section>
+
+    <!-- Farmer Info Section -->
+    <section class="info-section">
+      <div class="info-box">
+        <i class="fa fa-globe"></i>
+        <h3>Global Reach</h3>
+        <p>
+          Expand your business by connecting with customers from across the
+          world.
+        </p>
+      </div>
+      <div class="info-box">
+        <i class="fa fa-handshake-o"></i>
+        <h3>Partnerships</h3>
+        <p>We work with trusted partners to help you grow sustainably.</p>
+      </div>
+      <div class="info-box">
+        <i class="fa fa-truck"></i>
+        <h3>Efficient Distribution</h3>
+        <p>
+          Seamless delivery systems ensure your products reach markets faster.
+        </p>
+      </div>
+    </section>
+
+    <!-- Registration Form Section -->
+    <section id="register" class="registration-section">
+      <h2>Farmer Registration Form</h2>
+      <p>
+        Fill out the form below to register your farm with us and start selling
+        your products online.
+      </p>
+
+      <div class="form-container">
+        <form id="registration-form" onsubmit="return validateForm();">
+          <div class="form-group">
+            <label for="name">Full Name:</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Enter your full name"
+              required
+            />
+            <span id="name-error"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Enter your email"
+              required
+            />
+            <span id="email-error"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Phone Number:</label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              placeholder="Enter your phone number"
+              required
+            />
+            <span id="phone-error"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="location">Farm Location:</label>
+            <input
+              type="text"
+              id="location"
+              name="location"
+              placeholder="Enter your farm location"
+              required
+            />
+            <span id="location-error"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="products">Products Offered:</label>
+            <textarea
+              id="products"
+              name="products"
+              rows="4"
+              placeholder="List the products you offer"
+              required
+            ></textarea>
+            <span id="products-error"></span>
+          </div>
+
+          <input type="submit" value="Register" class="submit-btn" />
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-container">
+        <p>&copy; 2024 Green Business. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="business.js"></script>
+  </body>
+</html>

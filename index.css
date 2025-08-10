@@ -1,0 +1,926 @@
+:root {
+    --green: green;
+    --black: #130f40;
+    --light_color: #666;
+    --box-shadow: 0.0.3rem 1rem rgb(131, 125, 125);
+    --border: 2 rem solid rgba(0, 0, 0.1);
+    --outline: .1rem solid rgba(0, 0, 0.1);
+}
+
+body {
+    background: #eee;
+    padding-top: 7rem;
+    /* Ensure there's enough space for the fixed header */
+}
+
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* padding: 2rem 9%; */
+    background-color: white;
+    box-shadow: var(--box-shadow);
+    z-index: 1000;
+    /* Ensure the header stays on top of all content */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+
+    transition: all .2s linear;
+}
+
+html {
+    font-size: 70%;
+
+    scroll-behavior: smooth;
+    scroll-padding-top: 7rem;
+}
+
+body {
+    background: #eee;
+}
+
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 9%;
+    background-color: white;
+    box-shadow: var(--box-shadow);
+
+}
+
+#header .logo {
+    font-size: 2.5rem;
+    font-weight: bold;
+
+}
+
+#header .logo i {
+    color: var(--green)
+}
+
+#header .logo span {
+    color: black;
+}
+
+#header .navbar a {
+    font-size: 1.7rem;
+    margin: 0 1rem;
+    color: var(--black);
+
+
+}
+
+
+#header .navbar a:hover {
+    color: var(--green);
+}
+
+#header .icons i {
+    height: 4.5rem;
+    width: 4.5rem;
+    font-size: 1.7rem;
+    line-height: 4.5rem;
+    border-radius: 0.5rem;
+    background-color: #eee;
+    margin-right: 0.3rem;
+    text-align: center;
+    cursor: pointer;
+}
+
+#header .icons i:hover {
+    background-color: var(--green);
+    color: white;
+}
+
+#header .search-form {
+    border: 1px solid;
+    position: absolute;
+    top: 110%;
+    right: -110%;
+    width: 40rem;
+    height: 4rem;
+    background: #fff;
+    border-radius: .5rem;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    box-shadow: var(--box-shadow);
+    border: none;
+}
+
+#header .search-form.active {
+    right: 2rem;
+}
+
+#header .search-form input {
+    height: 100%;
+    width: 100%;
+    background: none;
+    font-size: 1.6rem;
+    padding: 0 1.5rem;
+}
+
+#header .search-form label {
+    font-size: 2rem;
+    padding-right: 1.5rem;
+    cursor: pointer;
+}
+
+#header .search-form label:hover {
+    color: var(--green);
+}
+
+#header .shopping_cart {
+    border: 1px solid;
+    position: absolute;
+    top: 100%;
+    right: 2rem;
+    padding: 1rem;
+    border-radius: 1.5rem;
+    box-shadow: var(--box-shadow);
+    width: 30rem;
+    background: #fff;
+}
+
+.shopping_cart img {
+    height: 20px;
+    width: 20px;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.shopping_cart img {
+    box-sizing: border-box;
+    height: 100px;
+    width: 100px;
+}
+.navbar .cart{
+    background-color: var(--theme-color);
+        border-radius: 25px;
+        text-align: center;
+        padding: 2px 8px;
+        position: absolute;
+}
+
+.shopping_cart .box {
+    border: 0px solid blue;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin: 1rem 1rem;
+}
+
+.shopping_cart .box .fa-trash {
+    font-size: 2rem;
+    position: absolute;
+    right: 2rem;
+    padding-right: 2rem;
+    cursor: pointer;
+
+}
+
+.shopping_cart .box .fa-trash:hover {
+    color: var(--green);
+}
+
+.shopping_cart .box .content h3 {
+    color: black;
+    font-size: 1.7rem;
+    padding-bottom: 1rem;
+}
+
+.shopping_cart .box .content span {
+    color: #595858;
+    font-size: 1.7rem;
+    padding-bottom: 1rem;
+}
+
+.shopping_cart .box .content .quantity {
+    padding-left: 1rem;
+}
+
+.shopping_cart .total {
+    font-size: 2rem;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.btn {
+    margin-top: 1rem;
+    display: inline-block;
+    padding: 1rem 10rem;
+    border: 2px solid rgb(45, 44, 44);
+    font-size: 1.8rem;
+    color: black;
+    cursor: pointer;
+    border-radius: 10px;
+    text-align: center;
+
+}
+
+.btn:hover {
+    background-color: var(--green);
+    color: white;
+}
+
+#header .shopping_cart {
+    border: 1px solid;
+    position: absolute;
+    top: 100%;
+    right: -110%;
+
+    padding: 1rem;
+    border-radius: 1.5rem;
+    box-shadow: var(--box-shadow);
+    width: 30rem;
+    background: #fff;
+}
+
+.shopping_cart {
+    display: none;
+    /* or you can use: visibility: hidden; */
+}
+
+/* Show the cart when the 'active' class is added */
+.shopping_cart.active {
+    display: block;
+    /* or you can use: visibility: visible; */
+    right: 2rem;
+}
+
+.content .img img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+/* Mobile Navbar Styles */
+@media (max-width: 768px) {
+
+    /* Hide navbar by default */
+    #header .navbar {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        width: 20rem;
+        background: #fff;
+        flex-direction: column;
+        box-shadow: var(--box-shadow);
+        transition: right 0.3s ease-in-out;
+        padding: 1rem;
+        z-index: 1000;
+    }
+
+    /* Show when active */
+    #header .navbar.active {
+        right: 0;
+    }
+
+    #header .navbar a {
+        display: block;
+        margin: 1rem 0;
+        font-size: 1.6rem;
+    }
+
+    /* Show hamburger icon */
+    #menu-btn {
+        display: inline-block;
+        height: 4.5rem;
+        width: 4.5rem;
+        font-size: 1.7rem;
+        line-height: 4.5rem;
+        border-radius: 0.5rem;
+        background-color: #eee;
+        margin-right: 0.3rem;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    /* Hide menu button on desktop */
+    @media (min-width: 769px) {
+        #menu-btn {
+            display: none;
+        }
+    }
+}
+
+.login-form {
+    width: 30rem;
+
+    position: absolute;
+    top: 110%;
+    right: -110%;
+    box-shadow: 3px 3px 3px #666;
+    padding: 2rem;
+    border-radius: .5rem;
+    background-color: white;
+    text-align: center;
+}
+
+.login-form.active {
+    right: 2rem;
+    transition: .4s linear;
+}
+
+.login-form p {
+    font-size: 1.4rem;
+    padding: .5rem 0;
+    color: #595858;
+}
+
+.login-form p a {
+    color: green;
+    text-decoration: underline;
+}
+
+.login-form h3 {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+
+}
+
+.login-form .box {
+    width: 100%;
+
+    margin: .7rem 0;
+    background-color: #eee;
+    border-radius: .5rem;
+    padding: 1rem;
+    font-size: 1.6rem;
+
+}
+/*login new css*/
+
+
+/*end login new css*/
+
+.list {
+    width: 20rem;
+    position: absolute;
+    top: 110%;
+    right: -110%;
+    box-shadow: 3px 3px 3px #666;
+    padding: 2rem;
+    border-radius: .5rem;
+    background-color: white;
+    text-align: center;
+}
+
+.list a {
+    font-size: 2rem;
+    width: 100%;
+    color: black;
+    padding: .5rem 0;
+}
+
+.list.active {
+    right: 20rem;
+    transition: .4s linear;
+}
+
+.content_background {
+    background-image: url('veg_back.avif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+    box-shadow: 1rem 1rem 1rem 1rem gray;
+    margin: 0 auto;
+}
+
+
+.text-overlay {
+    position: relative;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(32, 5, 95);
+    /* Makes the text visible */
+    text-align: center;
+    /* background-color: rgba(130, 234, 191, 0.5);*/
+    /* Semi-transparent background for readability */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.text-overlay h1 .organic {
+    color: green;
+}
+
+/* Optional: Style for the text */
+.text-overlay h1 {
+    font-size: 4em;
+    font-weight: bold;
+}
+
+.text-overlay span {
+    font-size: 5rem;
+}
+
+.text-overlay h2 {
+    font-size: 2rem;
+    padding-top: 5rem;
+    color: rgb(85, 106, 95);
+}
+
+
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3.7rem;
+    width: 15rem;
+    background-color: white;
+    color: green;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 1rem auto;
+    font-size: 2rem;
+    position: relative;
+    border: 2px solid black;
+
+
+}
+
+
+.button:hover {
+    background-color: green;
+    color: white;
+    /* Hover effect for better interaction */
+}
+
+
+.features {
+    text-align: center;
+    padding: 5rem;
+
+
+}
+
+.heading {
+    font-size: 3.5rem;
+    color: rgb(58, 57, 57);
+}
+
+.heading span {
+    color: white;
+    background-color: green;
+    padding: 10px;
+
+    display: inline-block;
+    padding: 0.5rem 3rem;
+    clip-path: polygon(100% 0, 93% 50%, 100% 99%, 0% 100%, 7% 50%, 0% 0%);
+}
+
+.box-container .box img {
+    height: 15rem;
+    width: 20rem;
+
+}
+
+.features .box-container {
+
+    display: flex;
+    justify-content: center;
+
+    gap: 6rem;
+    margin-top: 4rem;
+}
+
+.features .box-container .box {
+
+    border: 2px solid rgb(99, 99, 100);
+    padding: 0 2rem;
+    background-color: white;
+    outline: 3px solid rgb(182, 179, 179);
+    padding: 10px;
+    margin: 20px;
+    outline-offset: -1rem;
+    text-align: center;
+
+}
+
+.features .home_card:hover {
+    box-shadow:
+            0 8px 20px rgba(0, 0, 0, 0.15),
+           
+            0 0 15px rgba(39, 174, 96, 0.3);
+     
+        transform: translateY(-5px);
+        transition: all 0.3s ease;
+}
+
+.features .box-container .home_card h3 {
+    font-size: 2.5rem;
+    color: rgb(40, 40, 40);
+    line-height: 1.8;
+}
+
+.features .box-container .home_card p {
+
+    color: rgb(108, 106, 106);
+    line-height: 1;
+    font-size: 1.2rem;
+    padding: 0 5rem;
+}
+
+.products h1 {
+    margin-top: 5rem;
+    display: flex;
+    justify-content: center;
+}
+
+.product {
+    padding: 8rem 5rem;
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+    margin-top: 3rem;
+}
+
+.home_card {
+    height: 40rem;
+    width: 30rem;
+    border: 2px solid rgb(99, 99, 100);
+    padding: 0 2rem;
+    background-color: white;
+    outline: 3px solid rgb(182, 179, 179);
+    padding: 2rem;
+    outline-offset: -1rem;
+    text-align: center;
+    border-radius: 14px;
+}
+
+.home_card_img {
+    height: 18rem;
+    width: 100%;
+    object-fit: contain;
+    padding: 1rem 0;
+}
+
+.product .home_card:hover {
+    box-shadow:
+            0 8px 20px rgba(0, 0, 0, 0.9),
+        
+            0 0 15px rgba(39, 174, 96, 0.3);
+        transform: translateY(-5px);
+        transition: all 0.3s ease;
+}
+
+.product .home_card h1 {
+    font-size: 2.5rem;
+    color: rgb(40, 40, 40);
+    line-height: 1.8;
+}
+
+@media (max-width: 769px) {
+    .product {
+            padding: 8rem 5rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 5rem;
+            margin-top: 3rem;
+        }
+}
+
+@media (min-width: 469px) {
+    .product {
+        padding: 8rem 5rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 5rem;
+        margin-top: 3rem;
+    }
+}
+.footer {
+    background-color: white;
+}
+
+.footer .container {
+    display: flex;
+    justify-content: space-around;
+
+    gap: 1rem;
+    margin-top: 5rem;
+}
+
+.footer .container .box1 h3 {
+    font-size: 2.5rem;
+    color: rgb(36, 35, 35);
+    padding: 1rem 0;
+}
+
+.footer .container .box1 h3 i {
+    color: green;
+}
+
+.footer .container .box1 a {
+    display: block;
+    font-size: 1.5rem;
+    color: rgb(73, 71, 71);
+    padding: 1rem 0;
+
+}
+
+.footer .container .box1 a i {
+    color: green;
+    padding-right: .5rem;
+}
+
+.footer .container .box1 p {
+    line-height: 1.8;
+    font-size: 1.5rem;
+}
+
+.footer .container .box1 a:hover i {
+    padding-right: 2rem;
+}
+
+.footer .container .box1 .share a {
+
+    height: 4rem;
+    width: 4rem;
+    border-radius: .5rem;
+    font-size: 2rem;
+    color: #595858;
+    background-color: #e8e4e4;
+
+
+}
+
+.footer .container .box1 .share {
+    display: flex;
+
+    gap: 1rem;
+}
+
+.footer .container .box1 .share a {
+    padding-left: 1rem;
+}
+
+.footer .container .box1 .share a:hover {
+    background-color: green;
+    color: white;
+}
+
+.footer .container .box1 .email {
+    margin: .7rem 0;
+    padding: 1rem;
+    border-radius: .5rem;
+    background-color: #eee;
+    font-size: 1.6;
+    width: 100%;
+}
+
+
+@media (min-width: 469px){
+    .footer .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+    
+            gap: 1rem;
+            margin-top: 5rem;
+        }
+    
+}
+
+@media (max-width: 769px) {
+    .footer .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+
+        gap: 1rem;
+        margin-top: 5rem;
+    }
+}
+/* Features Section */
+.features {
+    padding: 80px 0;
+    background-color: #f5f5f5;
+}
+
+.features .heading {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 40px;
+    color: #333;
+    position: relative;
+    display: inline-block;
+}
+
+.features .heading span {
+    color: #28a745;
+}
+
+.box-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 0 50px;
+}
+
+/* Feature Cards */
+/*.feature-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.feature-card-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover .feature-card-img {
+    transform: scale(1.05);
+}
+
+.feature-content {
+    padding: 20px;
+    text-align: center;
+}
+
+.feature-content h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #28a745;
+}
+
+.feature-content p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.read-more-btn {
+    background-color: #28a745;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+
+.read-more-btn:hover {
+    background-color: #1c7a33;
+}*/
+
+.features {
+    padding: 80px 0;
+    background-color: #f5f5f5;
+}
+
+.features .heading {
+    text-align: center;
+    font-size: 4rem;
+    margin-bottom: 40px;
+    color: #333;
+    position: relative;
+    display: inline-block;
+}
+
+.features .heading span {
+    color: white;
+}
+
+.box-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 0 30px;
+}
+
+.feature-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 23.5%;
+    height: 370px;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+
+
+
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 5px 5px 5px 5px rgb(152, 152, 152);
+}
+
+.feature-card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    scale: 1 1;
+    transition: 0.5s ease-in-out;
+}
+
+.feature-card:hover .feature-card-img {
+    scale: 2 2;
+}
+
+
+.feature-card .feature-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(37, 37, 37, 0.7);
+    /* linear-gradient(to bottom, rgba(180, 255, 218, 0), rgba(36, 36, 36, 0.47), rgba(36, 36, 36, 0.871), rgb(36, 36, 36)); */
+    backdrop-filter: blur(10px);
+    color: #fff;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    transition: opacity 0.3s ease;
+    text-align: center;
+
+}
+
+.feature-card:hover .feature-content {
+    opacity: 1;
+}
+
+
+.feature-content h3 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    text-decoration: underline;
+    /* color: black; */
+}
+
+.feature-content p {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    /* color: black; */
+}
+
+
+@media (max-width: 900px) {
+    .box-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature-card {
+        width: 80%;
+        margin-bottom: 30px;
+    }
+}
+
+
+
+
+

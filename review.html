@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reviews - Green Business</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="review.css">
+</head>
+<body>
+
+    <!-- ✅ Navbar -->
+<header id="header">
+    <a href="#" class="logo">
+        <i class="fa fa-shopping-basket"></i>
+        <span>GREEN BUSINESS</span>
+    </a>
+    <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="index.html">Products</a>
+        <a href="about.html">About Us</a>
+        <a href="review.html">Reviews</a>
+    </nav>
+    <div class="icons">
+        <a href="cart1.html"><i class="fa fa-shopping-cart"></i></a>
+        <i class="fa fa-user"></i>
+    </div>
+</header>
+
+
+     <div class="content_background" id="Home">
+    <section class="review-section" action="http://localhost\FullProjects (11)\FullProjects (2)\FullProjects (2)\FullProjects\FullProjects\Green_Buisness_Website\review.php" method="post">
+        <h1>We Value Your Feedback</h1>
+        <p>Please rate your experience with us and leave a review to help us improve our service.</p>
+        
+        <div class="review-form">
+            <form action="#">
+                <div class="rating">
+                    <label for="rating">Rate Us:</label>
+                    <div class="stars">
+                        <input type="radio" name="rating" id="star5" value="5"><label for="star5"></label>
+                        <input type="radio" name="rating" id="star4" value="4"><label for="star4"></label>
+                        <input type="radio" name="rating" id="star3" value="3"><label for="star3"></label>
+                        <input type="radio" name="rating" id="star2" value="2"><label for="star2"></label>
+                        <input type="radio" name="rating" id="star1" value="1"><label for="star1"></label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="name">Your Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Your Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="feedback">Your Feedback:</label>
+                    <textarea id="feedback" name="feedback" rows="5" placeholder="Write your feedback here..." id="feedback" name="feedback" required></textarea>
+                </div>
+
+                <input type="submit" value="Submit Review" class="submit-btn">
+            </form>
+        </div>
+    </section>
+          </div>
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2024 Green Business. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping Cart</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            list-style: none;
+            outline: 0;
+        }
+        body {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        .navbar {
+            background-color: aliceblue;
+            display: flex;
+            justify-content: space-around;
+            padding: 15px;
+            font-size: 30px;
+            font-weight: bold;
+            box-shadow: 6px 6px 6px rgb(223, 221, 221);
+        }
+        /*.navbar .home {
+            color: green;
+        }
+        .navbar .cart {
+            height: 40px;
+            width: 40px;
+            background-color: lightgreen;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 30px;
+            padding-top: 5px;
+        }*/
+        .navbar .home {
+        color: var(--theme-color);
+      }
+      .navbar a:has(img) {
+        position: relative;
+      }
+      .navbar a img {
+        height: 2rem;
+      }
+      .navbar .cart {
+        background-color: green;
+        border-radius: 25px;
+        text-align: center;
+        padding: 2px 8px;
+        position: absolute;
+        top: -8px;
+        right: -8px;
+      }
+        .cart #cart_amount {
+             font-size: 16px;
+        color: rgb(255, 255, 255);
+        }
+        .cart_page {
+            padding: 20px 50px;
+        }
+        .cart_page .cart_item {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 20px 0;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+        }
+        .cart_item .rmv_btn {
+            padding: 15px 20px;
+            background-color: #000;
+            color: white;
+            cursor: pointer;
+            font-size: 20px;
+            transition: .5s;
+        }
+        .cart_item .rmv_btn:hover {
+            border: 1px solid;
+            background: transparent;
+            color: #000;
+        }
+        .total_price {
+            margin-top: 20px;
+            font-size: 24px;
+            font-weight: bold;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a class="home" href="index.html">Home</a>
+        <a href="cart2.html">
+            <img src="cart.svg" alt="" />
+            <div class="cart">
+                <div id="cart_amount">0</div>
+            </div>
+        </a>
+    </div>
+
+    <!-- Cart Page -->
+    <div class="cart_page">
+        <div class="shopping_cart" id="shopping_cart"></div>
+        <div class="label" id="label"></div>
+        <div id="total_price" class="total_price"></div> <!-- Section for total price -->
+    </div>
+    
+    <script src="vegis_data.js"></script>
+    <script src="cart2.js"></script>
+</body>
+</html>
